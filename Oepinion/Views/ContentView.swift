@@ -6,57 +6,47 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     
-    @State var resultsArePresented = false
+    @State private var selection:Tab = .Question
     
-    var question: Question
     
-    let options = [ Option(text: "Ja", buttonColor: Color.green),
-                    Option(text: "Nein", buttonColor: Color.red),
-                    Option(text: "Neutral", buttonColor: Color.orange)]
+    enum Tab{
+        case Question
+        case Results
+        case Account
+    }
     
+    init() {
+        UITabBar.appearance().tintColor = UIColor.red
+    }
+   
     var body: some View {
-        VStack {
-            Text(question.Text)
-                .multilineTextAlignment(.center)
-                .font(.title)
-                .padding(.bottom, 50)
-            
-            HStack{
-                
-                ForEach(options){ option in
-                    
-                    
-                    Button(option.text){
-                        resultsArePresented = true
-                    }
-                    .font(.title)
-                    .buttonStyle(.borderedProminent)
-                    .tint(option.buttonColor)
-                    .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(surveyResult: SurveyResult.test)
-                    }
+        
+        TabView{
+            QuestionView(question: Question.test)
+                .tabItem{
+                    Label("Umfrage", systemImage: "questionmark")
                 }
+                .tag(Tab.Question)
                 
-                
-                
-                
-                
-                
-                
-            }
-                
-        }
-        .padding()
+            
+            TopicsList()
+                .tabItem{
+                    Label("Meinungen", systemImage: "person.2.wave.2")
+                        
+                }
+                .tag(Tab.Results)
+      
+        }.accentColor(.red)
         
-        
-
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(question: Question.test)
+        ContentView()
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct OepinionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(question: Question.test)
+            ContentView()
         }
     }
 }

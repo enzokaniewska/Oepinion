@@ -10,36 +10,36 @@ import SwiftUI
 
 struct ResultsView: View {
     
-    var surveyResult: SurveyResult
+    var survey: Survey
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         
         VStack(alignment: .center){
             
-            
-            Text("Das denken die Österreicher zu diesem Thema")
+            Spacer()
+            Text("Das denken die Österreicher zu diesem Thema:")
                 .font(.title)
                 .bold()
-                .padding(10)
+                .padding(20)
             
             Spacer()
             
             Chart{
                 BarMark(
                     x: .value("Yes", "Yes"),
-                    y: .value("Anzahl", surveyResult.answers[.yes]!)
+                    y: .value("Anzahl", survey.answers[.yes]!)
                 )
                 .foregroundStyle(Color.green)
                 
                 BarMark(
                     x: .value("Nein", "No"),
-                    y: .value("Anzahl", surveyResult.answers[.no]!)
+                    y: .value("Anzahl", survey.answers[.no]!)
                 )
                 .foregroundStyle(Color.red)
                 
                 BarMark(
                     x: .value("Neutral", "Neutral"),
-                    y: .value("Anzahl", surveyResult.answers[.neutral]!)
+                    y: .value("Anzahl", survey.answers[.neutral]!)
                 )
                 .foregroundStyle(Color.orange)
                 
@@ -49,12 +49,18 @@ struct ResultsView: View {
             }
             .frame(width: 300, height: 300)
             
+            Text("12332 Menschen haben bei dieser Umfrage teilgenommen")
+                
+            
             Spacer()
             
             Button("Zurück zur nächsten Frage"){
                 presentationMode.wrappedValue.dismiss()
             }
+            .font(.title)
             .buttonStyle(.borderedProminent)
+            
+            Spacer()
             
         }
         
@@ -64,6 +70,6 @@ struct ResultsView: View {
 
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultsView(surveyResult: SurveyResult.test)
+        ResultsView(survey: Survey.test)
     }
 }

@@ -17,6 +17,10 @@
 		EE50B14528E3713500FF3261 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14428E3713500FF3261 /* Question.swift */; };
 		EE50B14728E3733100FF3261 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14628E3733100FF3261 /* ResultsView.swift */; };
 		EE50B14928E37E8D00FF3261 /* SurveyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14828E37E8D00FF3261 /* SurveyResult.swift */; };
+		EE50B14D28E470E800FF3261 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14C28E470E800FF3261 /* QuestionView.swift */; };
+		EE50B14F28E473B900FF3261 /* TopicsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14E28E473B900FF3261 /* TopicsList.swift */; };
+		EE50B15128E47A5E00FF3261 /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B15028E47A5E00FF3261 /* QuestionItem.swift */; };
+		EE50B15328E4932300FF3261 /* QuestionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B15228E4932300FF3261 /* QuestionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		EE50B14428E3713500FF3261 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		EE50B14628E3733100FF3261 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		EE50B14828E37E8D00FF3261 /* SurveyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResult.swift; sourceTree = "<group>"; };
+		EE50B14C28E470E800FF3261 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		EE50B14E28E473B900FF3261 /* TopicsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsList.swift; sourceTree = "<group>"; };
+		EE50B15028E47A5E00FF3261 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
+		EE50B15228E4932300FF3261 /* QuestionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,10 @@
 			children = (
 				EE50B11828E36E7400FF3261 /* ContentView.swift */,
 				EE50B14628E3733100FF3261 /* ResultsView.swift */,
+				EE50B14C28E470E800FF3261 /* QuestionView.swift */,
+				EE50B14E28E473B900FF3261 /* TopicsList.swift */,
+				EE50B15028E47A5E00FF3261 /* QuestionItem.swift */,
+				EE50B15228E4932300FF3261 /* QuestionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,10 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE50B15328E4932300FF3261 /* QuestionRow.swift in Sources */,
 				EE50B14928E37E8D00FF3261 /* SurveyResult.swift in Sources */,
 				EE50B14528E3713500FF3261 /* Question.swift in Sources */,
+				EE50B14F28E473B900FF3261 /* TopicsList.swift in Sources */,
 				EE50B14728E3733100FF3261 /* ResultsView.swift in Sources */,
 				EE50B11928E36E7400FF3261 /* ContentView.swift in Sources */,
+				EE50B15128E47A5E00FF3261 /* QuestionItem.swift in Sources */,
+				EE50B14D28E470E800FF3261 /* QuestionView.swift in Sources */,
 				EE50B11728E36E7400FF3261 /* OepinionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
