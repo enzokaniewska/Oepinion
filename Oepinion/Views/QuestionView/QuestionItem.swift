@@ -87,6 +87,6 @@ struct QuestionItem: View {
 
 struct ResultsRow_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionItem(survey: Survey.test)
+        QuestionItem(survey: ModelData.testSurveys.first!)
     }
 }

@@ -26,7 +26,7 @@ struct ContentView: View {
     var body: some View {
         
         TabView{
-            QuestionView(question: Question.test)
+            QuestionView(question: ModelData.test)
                 .tabItem{
                     Label("Abstimmen", systemImage: "figure.wave")
                         .symbolRenderingMode(.hierarchical)

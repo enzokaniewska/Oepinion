@@ -11,9 +11,9 @@ struct TopicsList: View {
     
   
     
-    let topics = Survey.testList
+    let topics = ModelData.testSurveys
     
-    @State var user = User.testUser
+    @State var user = ModelData.testUser
     @State var userSheetPresented = false
     
     
@@ -35,7 +35,7 @@ struct TopicsList: View {
                     .padding(.bottom, 5)
                     
                     
-                    QuestionItem(survey: Survey.test)
+                    QuestionItem(survey: ModelData.testSurveys.last!)
                         .padding(.bottom)
                      
                     
@@ -44,24 +44,7 @@ struct TopicsList: View {
                         .bold()
                         .padding(.leading)
                     
-                    HStack(){
-                        Spacer()
-                        CategoryButton(category: Survey.categories.financial)
-                        CategoryButton(category: Survey.categories.political)
-                        Spacer()
-                    }
-                    HStack{
-                        Spacer()
-                        CategoryButton(category: Survey.categories.education)
-                        CategoryButton(category: Survey.categories.transport)
-                        Spacer()
-                    }
-                    HStack{
-                        Spacer()
-                        CategoryButton(category: Survey.categories.health)
-                        CategoryButton(category: Survey.categories.environment)
-                        Spacer()
-                    }
+                    CategoryOverview()
                     
                     
                     HStack(alignment: .center, spacing: 15) {

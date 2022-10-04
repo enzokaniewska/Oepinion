@@ -18,6 +18,12 @@ struct QuestionView: View {
                     Option(text: "Nein", buttonColor: Color.red),
                     Option(text: "Neutral", buttonColor: Color.orange)]
     
+    let answerIcons = [
+        Question.Answer.yes: "hand.thumbsup.circle.fill",
+        Question.Answer.no: "hand.thumbsdown.circle.fill",
+        Question.Answer.neutral: "hand.raised.circle.fill"
+    ]
+    
     var body: some View {
         
         
@@ -40,12 +46,12 @@ struct QuestionView: View {
                     
                 }, label: {
                     
-                    Label(options[0].text, systemImage: Question.answerIcons[options[0].text] ?? "")
+                    Label(options[0].text, systemImage: answerIcons[.yes] ?? "")
                         .imageScale(.large)
                         .symbolRenderingMode(.hierarchical)
                         .font(.title2)
                 })
-                    .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: Survey.test)
+                .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: ModelData.testSurveys.first!)
                 }
                     .buttonStyle(.borderedProminent)
                     .tint(options[0].buttonColor)
@@ -56,12 +62,12 @@ struct QuestionView: View {
                     resultsArePresented.toggle()
                 }, label: {
                     
-                    Label(options[1].text, systemImage: Question.answerIcons[options[1].text] ?? "")
+                    Label(options[1].text, systemImage: answerIcons[.no] ?? "")
                         .imageScale(.large)
                         .symbolRenderingMode(.hierarchical)
                         .font(.title2)
                 })
-                    .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: Survey.test)
+                .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: ModelData.testSurveys.first!)
                 }
                         .buttonStyle(.borderedProminent)
                         .tint(options[1].buttonColor)
@@ -71,13 +77,13 @@ struct QuestionView: View {
                     Button(action: {
                         
                     }, label: {
-                        Label(options[2].text, systemImage: Question.answerIcons[options[2].text] ?? "")
+                        Label(options[2].text, systemImage: answerIcons[.neutral] ?? "")
                             .imageScale(.large)
                             .symbolRenderingMode(.hierarchical)
                             .font(.title2)
                         
                     })
-                        .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: Survey.test)
+                    .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: ModelData.testSurveys.first!)
                     }
                         .buttonStyle(.borderedProminent)
                         .tint(options[2].buttonColor)
@@ -97,7 +103,7 @@ struct QuestionView: View {
 
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionView(question: Question.test2)
+        QuestionView(question: ModelData.test2)
     }
 }
 

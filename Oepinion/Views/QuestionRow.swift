@@ -38,6 +38,6 @@ struct QuestionRow: View {
 
 struct QuestionRow_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionRow(surveyList: Survey.testList, title: "Titel")
+        QuestionRow(surveyList: ModelData.testSurveys, title: "Titel")
     }
 }

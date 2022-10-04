@@ -114,6 +114,6 @@ struct UserView: View {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(user: .constant(User.testUser))
+        UserView(user: .constant(ModelData.testUser))
     }
 }

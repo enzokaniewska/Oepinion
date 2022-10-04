@@ -43,9 +43,9 @@ struct PieChartView: View {
                     .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.5)
                 
                 VStack{
-                    Text("Gesamt")
-                        .font(.title)
-                        .bold()
+                    Image(systemName: "person.3.sequence.fill")
+                        .symbolRenderingMode(.hierarchical)
+                    
                     Text(String(Int(values.reduce(0, +))))
                         .font(.title)
                         

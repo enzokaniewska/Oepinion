@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryButton: View {
     
-    var category: Survey.categories
+    var category: Survey.Category
     
     var body: some View {
         
