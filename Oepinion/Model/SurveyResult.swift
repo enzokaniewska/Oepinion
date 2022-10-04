@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Survey: Identifiable{
     
-    enum categories:String{
+    enum categories:String, CaseIterable{
         case political = "Politik"
         case health = "Gesundheit"
         case transport = "Transport"
@@ -17,31 +18,51 @@ struct Survey: Identifiable{
         case education = "Bildung"
         case environment = "Umwelt"
     }
-    static let categoryIcons = [
-        categories.political : "",
-        categories.health : "heart.fill",
-        categories.transport: "car.fill",
-        categories.financial: "banknote.fill",
-        categories.environment: "leaf.fill",
-        categories.education: "book.fill"
+    
+    static let categoryList: [Survey.categories] = [
+        .political,
+        .transport,
+        .education,
+        .environment,
+        .health,
+        .financial
     ]
+    
+    
+    
     public static let testList = [
-        Survey(question: Question.test,
+        Survey(question: Question.test2,
                answers: [.yes: 400,
                          .no: 1000,
                          .neutral: 300]),
-        Survey(question: Question.test,
+        Survey(question: Question.test3,
                answers: [.yes: 400,
                          .no: 1000,
                          .neutral: 300]),
-        Survey(question: Question.test,
+        Survey(question: Question.test4,
                answers: [.yes: 400,
                          .no: 1000,
                          .neutral: 300]),
-        Survey(question: Question.test,
+        Survey(question: Question.test5,
                answers: [.yes: 400,
                          .no: 1000,
                          .neutral: 300]),
+        Survey(question: Question.test6,
+               answers: [.yes: 400,
+                         .no: 1000,
+                         .neutral: 300]),
+        Survey(question: Question.test7,
+               answers: [.yes: 400,
+                         .no: 1000,
+                         .neutral: 300]),
+        Survey(question: Question.test8,
+               answers: [.yes: 400,
+                         .no: 1000,
+                         .neutral: 300]),
+        Survey(question: Question.test9,
+               answers: [.yes: 400,
+                         .no: 1000,
+                         .neutral: 300])
     ]
                            
     

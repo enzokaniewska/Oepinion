@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE43D79A28E5B019001B8CAC /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D79928E5B019001B8CAC /* CategoryLabel.swift */; };
+		EE43D79E28E6D770001B8CAC /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D79D28E6D770001B8CAC /* UserView.swift */; };
+		EE43D7A828E9B067001B8CAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7A728E9B067001B8CAC /* User.swift */; };
+		EE43D7AA28E9B4F9001B8CAC /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7A928E9B4F9001B8CAC /* StartScreen.swift */; };
+		EE43D7AE28EAE4F7001B8CAC /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7AD28EAE4F7001B8CAC /* CategoryButton.swift */; };
+		EE43D7B128EB6634001B8CAC /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7B028EB6634001B8CAC /* PieChartView.swift */; };
+		EE43D7B328EB6E1B001B8CAC /* PieChartSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7B228EB6E1B001B8CAC /* PieChartSlice.swift */; };
+		EE43D7B628EB7DA4001B8CAC /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7B528EB7DA4001B8CAC /* ChartView.swift */; };
 		EE50B11728E36E7400FF3261 /* OepinionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B11628E36E7400FF3261 /* OepinionApp.swift */; };
 		EE50B11928E36E7400FF3261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B11828E36E7400FF3261 /* ContentView.swift */; };
 		EE50B11B28E36E7400FF3261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE50B11A28E36E7400FF3261 /* Assets.xcassets */; };
@@ -41,6 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE43D79928E5B019001B8CAC /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
+		EE43D79D28E6D770001B8CAC /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		EE43D7A728E9B067001B8CAC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EE43D7A928E9B4F9001B8CAC /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
+		EE43D7AD28EAE4F7001B8CAC /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		EE43D7B028EB6634001B8CAC /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		EE43D7B228EB6E1B001B8CAC /* PieChartSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartSlice.swift; sourceTree = "<group>"; };
+		EE43D7B528EB7DA4001B8CAC /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		EE50B11328E36E7400FF3261 /* Oepinion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oepinion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE50B11628E36E7400FF3261 /* OepinionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OepinionApp.swift; sourceTree = "<group>"; };
 		EE50B11828E36E7400FF3261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +101,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE43D79B28E63652001B8CAC /* QuestionView */ = {
+			isa = PBXGroup;
+			children = (
+				EE50B14E28E473B900FF3261 /* TopicsList.swift */,
+				EE50B15028E47A5E00FF3261 /* QuestionItem.swift */,
+				EE43D7AD28EAE4F7001B8CAC /* CategoryButton.swift */,
+			);
+			path = QuestionView;
+			sourceTree = "<group>";
+		};
+		EE43D79C28E63668001B8CAC /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D79928E5B019001B8CAC /* CategoryLabel.swift */,
+			);
+			path = "Helper Views";
+			sourceTree = "<group>";
+		};
+		EE43D7AF28EB6623001B8CAC /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D7B028EB6634001B8CAC /* PieChartView.swift */,
+				EE43D7B228EB6E1B001B8CAC /* PieChartSlice.swift */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
+		EE43D7B428EB7D82001B8CAC /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D7AF28EB6623001B8CAC /* PieChart */,
+				EE43D7B528EB7DA4001B8CAC /* ChartView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		EE50B10A28E36E7400FF3261 = {
 			isa = PBXGroup;
 			children = (
@@ -145,12 +197,15 @@
 		EE50B14028E3710700FF3261 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE43D7B428EB7D82001B8CAC /* Charts */,
 				EE50B11828E36E7400FF3261 /* ContentView.swift */,
+				EE43D79B28E63652001B8CAC /* QuestionView */,
+				EE43D79C28E63668001B8CAC /* Helper Views */,
 				EE50B14628E3733100FF3261 /* ResultsView.swift */,
 				EE50B14C28E470E800FF3261 /* QuestionView.swift */,
-				EE50B14E28E473B900FF3261 /* TopicsList.swift */,
-				EE50B15028E47A5E00FF3261 /* QuestionItem.swift */,
 				EE50B15228E4932300FF3261 /* QuestionRow.swift */,
+				EE43D79D28E6D770001B8CAC /* UserView.swift */,
+				EE43D7A928E9B4F9001B8CAC /* StartScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +215,7 @@
 			children = (
 				EE50B14428E3713500FF3261 /* Question.swift */,
 				EE50B14828E37E8D00FF3261 /* SurveyResult.swift */,
+				EE43D7A728E9B067001B8CAC /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,14 +350,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE43D79E28E6D770001B8CAC /* UserView.swift in Sources */,
+				EE43D79A28E5B019001B8CAC /* CategoryLabel.swift in Sources */,
 				EE50B15328E4932300FF3261 /* QuestionRow.swift in Sources */,
 				EE50B14928E37E8D00FF3261 /* SurveyResult.swift in Sources */,
+				EE43D7AA28E9B4F9001B8CAC /* StartScreen.swift in Sources */,
 				EE50B14528E3713500FF3261 /* Question.swift in Sources */,
+				EE43D7B128EB6634001B8CAC /* PieChartView.swift in Sources */,
 				EE50B14F28E473B900FF3261 /* TopicsList.swift in Sources */,
 				EE50B14728E3733100FF3261 /* ResultsView.swift in Sources */,
 				EE50B11928E36E7400FF3261 /* ContentView.swift in Sources */,
+				EE43D7B628EB7DA4001B8CAC /* ChartView.swift in Sources */,
+				EE43D7A828E9B067001B8CAC /* User.swift in Sources */,
 				EE50B15128E47A5E00FF3261 /* QuestionItem.swift in Sources */,
+				EE43D7AE28EAE4F7001B8CAC /* CategoryButton.swift in Sources */,
 				EE50B14D28E470E800FF3261 /* QuestionView.swift in Sources */,
+				EE43D7B328EB6E1B001B8CAC /* PieChartSlice.swift in Sources */,
 				EE50B11728E36E7400FF3261 /* OepinionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

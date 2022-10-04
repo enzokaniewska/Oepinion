@@ -10,63 +10,67 @@ import SwiftUI
 
 struct ResultsView: View {
     
-    var survey: Survey
+    var survey:Survey
+    
+    
     @Environment(\.presentationMode) var presentationMode
+    
+    
     var body: some View {
         
         VStack(alignment: .center){
             
             Spacer()
-            Text("Das denken die Österreicher zu diesem Thema:")
-                .font(.title)
+            
+            Text("Danke fürs Abstimmen!")
+                .font(.largeTitle)
                 .bold()
+            
+            Text("Das denken deine Mitmenschen zu diesem Thema:")
+                .font(.title2)
+                .fontWeight(.regular)
                 .padding(20)
             
-            Spacer()
             
-            Chart{
-                BarMark(
-                    x: .value("Yes", "Yes"),
-                    y: .value("Anzahl", survey.answers[.yes]!)
-                )
-                .foregroundStyle(Color.green)
-                
-                BarMark(
-                    x: .value("Nein", "No"),
-                    y: .value("Anzahl", survey.answers[.no]!)
-                )
-                .foregroundStyle(Color.red)
-                
-                BarMark(
-                    x: .value("Neutral", "Neutral"),
-                    y: .value("Anzahl", survey.answers[.neutral]!)
-                )
-                .foregroundStyle(Color.orange)
-                
-                
-                
-                
-            }
+            ChartView(survey: survey)
+            
+            
             .frame(width: 300, height: 300)
             
-            Text("12332 Menschen haben bei dieser Umfrage teilgenommen")
-                
+            
+            Text("\(survey.totalParticipants) Menschen haben bei dieser Umfrage teilgenommen")
+            
             
             Spacer()
-            
-            Button("Zurück zur nächsten Frage"){
-                presentationMode.wrappedValue.dismiss()
+            Button(action: {
+                
+            }) {
+                Label("Teilen", systemImage: "square.and.arrow.up.circle.fill")
+                    .symbolRenderingMode(.hierarchical)
             }
             .font(.title)
             .buttonStyle(.borderedProminent)
+            .tint(.blue)
+            .padding(.bottom,5)
             
-            Spacer()
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+                
+            }) {
+                Label("Zurück", systemImage: "arrowshape.turn.up.backward.circle.fill")
+                    .symbolRenderingMode(.hierarchical)
+            }
+            .font(.title)
+            .buttonStyle(.borderedProminent)
+            .tint(.red)
+            
             
         }
-        
-            
     }
+    
+    
 }
+
 
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {

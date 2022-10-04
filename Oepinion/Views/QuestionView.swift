@@ -11,6 +11,7 @@ struct QuestionView: View {
     
     @State var resultsArePresented = false
     
+    @State private var noPressed = false
     var question: Question
     
     let options = [ Option(text: "Ja", buttonColor: Color.green),
@@ -18,55 +19,85 @@ struct QuestionView: View {
                     Option(text: "Neutral", buttonColor: Color.orange)]
     
     var body: some View {
-        VStack {
-            Text("Titel der Frage")
-                .font(.title)
+        
+        
+        VStack(alignment: .leading) {
+            Text(question.title)
+                .font(.largeTitle)
                 .bold()
             
-            Label(Survey.categories.education.rawValue, systemImage: Survey.categoryIcons[Survey.categories.education] ?? "")
-                .foregroundColor(Color.red)
-                .padding(1)
-                
-            Text(question.Text)
-                .multilineTextAlignment(.center)
-                .font(.title2)
-                .padding()
-                .padding()
+            CategoryLabel(category: question.category!)
             
+            
+            Text(question.content)
+                .font(.title2)
+                .padding(.top)
+                .padding(.bottom)
             
             HStack{
                 
-                ForEach(options){ option in
+                Button(action: {
                     
-                    Button(option.text){
-                        resultsArePresented = true
-                    }
-                    .font(.title)
-                    .buttonStyle(.borderedProminent)
-                    .tint(option.buttonColor)
+                }, label: {
+                    
+                    Label(options[0].text, systemImage: Question.answerIcons[options[0].text] ?? "")
+                        .imageScale(.large)
+                        .symbolRenderingMode(.hierarchical)
+                        .font(.title2)
+                })
                     .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: Survey.test)
+                }
+                    .buttonStyle(.borderedProminent)
+                    .tint(options[0].buttonColor)
+                   
+
+                
+                Button(action: {
+                    resultsArePresented.toggle()
+                }, label: {
+                    
+                    Label(options[1].text, systemImage: Question.answerIcons[options[1].text] ?? "")
+                        .imageScale(.large)
+                        .symbolRenderingMode(.hierarchical)
+                        .font(.title2)
+                })
+                    .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: Survey.test)
+                }
+                        .buttonStyle(.borderedProminent)
+                        .tint(options[1].buttonColor)
+                        
+                    
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Label(options[2].text, systemImage: Question.answerIcons[options[2].text] ?? "")
+                            .imageScale(.large)
+                            .symbolRenderingMode(.hierarchical)
+                            .font(.title2)
+                        
+                    })
+                        .fullScreenCover(isPresented: $resultsArePresented){ ResultsView(survey: Survey.test)
                     }
+                        .buttonStyle(.borderedProminent)
+                        .tint(options[2].buttonColor)
+                        
+                    
                 }
                 
-                
-                
-                
-                
-                
-                
             }
-                
-        }
         .padding()
         
-        
-
+                
     }
+        
+        
 }
+
 
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionView(question: Question.test)
+        QuestionView(question: Question.test2)
     }
 }
 

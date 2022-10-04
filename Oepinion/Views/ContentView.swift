@@ -28,14 +28,15 @@ struct ContentView: View {
         TabView{
             QuestionView(question: Question.test)
                 .tabItem{
-                    Label("Umfrage", systemImage: "questionmark")
+                    Label("Abstimmen", systemImage: "figure.wave")
+                        .symbolRenderingMode(.hierarchical)
                 }
                 .tag(Tab.Question)
                 
             
             TopicsList()
                 .tabItem{
-                    Label("Meinungen", systemImage: "person.2.wave.2")
+                    Label("Übersicht", systemImage: "square.text.square.fill")
                         
                 }
                 .tag(Tab.Results)
