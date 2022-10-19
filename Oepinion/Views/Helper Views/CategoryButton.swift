@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoryButton: View {
     
+    var isSelected = false
     var category: Survey.Category
     
     var body: some View {
@@ -22,7 +23,8 @@ struct CategoryButton: View {
                 .bold()
                 .padding()
                 .background(.linearGradient(CategoryLabel.categoryColors[category]!.gradient, startPoint: .leading, endPoint: .trailing))
-            .cornerRadius(15)
+                .cornerRadius(15)
+                
             
         }
             
@@ -34,7 +36,7 @@ struct CategoryButton_Previews: PreviewProvider {
         VStack (spacing: 20) {
             CategoryButton(category: .health)
             CategoryButton(category: .political)
-            CategoryButton(category: .financial)
+            CategoryButton(isSelected: true, category: .financial)
             CategoryButton(category: .environment)
             CategoryButton(category: .education)
             CategoryButton(category: .transport)

@@ -8,15 +8,15 @@
 import SwiftUI
 import UIKit
 
-struct ContentView: View {
+struct MainAppView: View {
     
-    @State private var selection:Tab = .Question
-    
+    @State private var selection:Tab = .Explore
+    @EnvironmentObject var modelData: ModelData
+
     
     enum Tab{
         case Question
-        case Results
-        case Account
+        case Explore
     }
     
     init() {
@@ -26,7 +26,7 @@ struct ContentView: View {
     var body: some View {
         
         TabView{
-            QuestionView(question: ModelData.test)
+            QuestionView(survey: modelData.surveys.first!)
                 .tabItem{
                     Label("Abstimmen", systemImage: "figure.wave")
                         .symbolRenderingMode(.hierarchical)
@@ -34,12 +34,12 @@ struct ContentView: View {
                 .tag(Tab.Question)
                 
             
-            TopicsList()
+            ExploreView()
                 .tabItem{
                     Label("Übersicht", systemImage: "square.text.square.fill")
                         
                 }
-                .tag(Tab.Results)
+                .tag(Tab.Explore)
       
         }.accentColor(.red)
         
@@ -48,6 +48,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainAppView()
+            .environmentObject(ModelData())
     }
 }

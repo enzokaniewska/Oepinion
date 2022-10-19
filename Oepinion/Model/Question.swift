@@ -15,6 +15,7 @@ struct Question{
     var opinion: Answer?
     var category: Survey.Category?
     
+    
     enum Answer: String, CaseIterable{
         case yes = "Ja"
         case no = "Nein"
@@ -30,6 +31,7 @@ struct Option: Identifiable{
     var text: String
     var buttonColor: Color
     var id = UUID()
+    
     
     
 }

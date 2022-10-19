@@ -23,7 +23,7 @@ struct QuestionRow: View {
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(spacing: 20) {
                         ForEach(surveyList){ survey in
-                            QuestionItem(survey: survey)
+                            SurveyItem(survey: survey)
                                 
                         }
                     }
@@ -38,6 +38,6 @@ struct QuestionRow: View {
 
 struct QuestionRow_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionRow(surveyList: ModelData.testSurveys, title: "Titel")
+        QuestionRow(surveyList: ModelData().surveys, title: "Titel")
     }
 }

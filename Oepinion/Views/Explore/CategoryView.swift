@@ -9,16 +9,23 @@ import SwiftUI
 
 struct CategoryView: View {
     
+    @EnvironmentObject var modelData: ModelData
+
     var category: Survey.Category
     
-    var filteredSurveys: [Survey]{ ModelData.testSurveys.filter{ $0.question.category == self.category}
+    var filteredSurveys: [Survey]{ modelData.surveys.filter{ $0.category == self.category}
     }
     var body: some View {
         
         
         ScrollView{
+            
+            if filteredSurveys.isEmpty{
+                Text("Ups, in dieser Kategorie ist noch nichts")
+            }
+            
             ForEach(filteredSurveys) { survey in
-                QuestionItem(survey: survey)
+                SurveyItem(survey: survey)
             }
             
             
@@ -31,6 +38,7 @@ struct CategoryView: View {
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
         CategoryView(category: .political)
+            .environmentObject(ModelData())
         
     }
 }

@@ -37,21 +37,21 @@ struct ChartView: View {
                 Chart{
                     BarMark(
                         x: .value("Yes", "Ja"),
-                        y: .value("Anzahl", survey.results[.yes]!)
+                        y: .value("Anzahl", survey.results["yes"]!)
                     )
                     .cornerRadius(10)
                     .foregroundStyle(Color.green)
                     
                     BarMark(
                         x: .value("Nein", "Nein"),
-                        y: .value("Anzahl", survey.results[.no]!)
+                        y: .value("Anzahl", survey.results["no"]!)
                     )
                     .cornerRadius(10)
                     .foregroundStyle(Color.red)
                     
                     BarMark(
                         x: .value("Neutral", "Neutral"),
-                        y: .value("Anzahl", survey.results[.neutral]!)
+                        y: .value("Anzahl", survey.results["neutral"]!)
                     )
                     .cornerRadius(10)
                     .foregroundStyle(Color.orange)
@@ -63,9 +63,9 @@ struct ChartView: View {
                     backgroundColor: .white,
                     colors: [.green, .red, .orange],
                     values: [
-                        Double(survey.results[.yes]!),
-                        Double(survey.results[.no]!),
-                        Double(survey.results[.neutral]!)
+                        Double(survey.results["yes"]!),
+                        Double(survey.results["no"]!),
+                        Double(survey.results["neutral"]!)
                     ]
                 )
                 .frame(width: 260, height: 260)
@@ -81,6 +81,6 @@ struct ChartView: View {
 
 struct ChartView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartView(survey: ModelData.testSurveys.first!)
+        ChartView(survey: ModelData().surveys.first!)
     }
 }

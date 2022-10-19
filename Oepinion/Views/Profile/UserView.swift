@@ -9,13 +9,17 @@ import SwiftUI
 
 struct UserView: View {
     
+    @EnvironmentObject var modelData: ModelData
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.editMode) var editMode
     let haptic = UINotificationFeedbackGenerator()
-    @Binding var user: User
+
+    @State var editedUser = ModelData.testUser
+    
     @State private var newPictureButtonPressed = false
     
     var image:Image{
-        Image(user.imageName)
+        Image(modelData.user.imageName)
     }
     
     var body: some View {
@@ -24,11 +28,19 @@ struct UserView: View {
         VStack (alignment: .leading){
             
             HStack{
+                if(editMode?.wrappedValue == .active){
+                    Button("Cancel", role: .cancel) {
+                        editedUser = modelData.user
+                        editMode?.animation().wrappedValue = .inactive
+                    }
+                }
+                
                 Spacer()
-                Button("Zurück", action: {
-                    dismiss()
-                })
+                EditButton()
+                    
+            
             }
+            .padding(.bottom, 10)
             Text("Dein Account")
                 .font(.largeTitle)
                 .bold()
@@ -40,10 +52,11 @@ struct UserView: View {
                     .resizable()
                     .shadow(radius: 4)
                     .frame(width: 200, height: 200)
-                    .overlay{
-                        Circle().stroke(.white, lineWidth: 4)
-                    }
-                    .rotationEffect(.degrees(newPictureButtonPressed ? 360 : 0))
+//                    .overlay{
+//                        Circle().stroke(.white, lineWidth: 4)
+//                    }
+                    //.rotationEffect(.degrees(newPictureButtonPressed ? 360 : 0))
+                    .rotation3DEffect(.degrees(newPictureButtonPressed ? 180: 0), axis: (x: 0, y: 1, z: 0))
                     .padding()
                     
                 Spacer()
@@ -55,53 +68,33 @@ struct UserView: View {
                     
                     haptic.notificationOccurred(.success)
                     withAnimation(.spring()){
-                        user.imageName = "animal\(Int.random(in: 1...50))"
+                        modelData.user.imageName = "animal\(Int.random(in: 1...50))"
                         newPictureButtonPressed.toggle()
                     }
-                    
-                    
-                    
+        
                 }, label: {
                     Label("Neues Profilbild", systemImage: "dice.fill")
                         
                 })
                 .buttonStyle(.bordered)
+                .tint(.teal)
                 Spacer()
             }
             
-            List{
-                
-                HStack {
-                    Text("Alter")
-                    .bold()
+            if(editMode?.wrappedValue == .inactive){
+                ProfileDataView(user: modelData.user)
                     
-                    Spacer()
-                    
-                    Text("\(user.age)")
-                }
-                
-                
-                HStack {
-                    Text("Bundesland")
-                    .bold()
-                    
-                    Spacer()
-                    
-                    Text("\(user.region)")
-                }
-                
-                HStack{
-                    Text("Benachrichtigungen")
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Text(user.isNotificationEnabled ? "Ein" : "Aus")
-                }
-                
+            }else{
+                ProfileEditor(editedUser: $editedUser)
+                    .onAppear{
+                        editedUser = modelData.user
+                    }
+                    .onDisappear{
+                        modelData.user = editedUser
+                    }
                 
             }
-            .listStyle(.plain)
+            
             
             Spacer()
             
@@ -114,6 +107,7 @@ struct UserView: View {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(user: .constant(ModelData.testUser))
+        UserView()
+            .environmentObject(ModelData())
     }
 }

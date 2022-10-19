@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PieChartSlice: View {
     
+    @State var showsPopover = false
     var pieData: PieChartData
     
     var midRadians: Double {
@@ -36,6 +37,8 @@ struct PieChartSlice: View {
                         clockwise: false)
                 }
                 .fill(pieData.color)
+                
+                
                 
                 Text(pieData.text)
                     .position(

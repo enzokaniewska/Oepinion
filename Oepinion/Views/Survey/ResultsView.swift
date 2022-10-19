@@ -12,9 +12,7 @@ struct ResultsView: View {
     
     var survey:Survey
     
-    
     @Environment(\.presentationMode) var presentationMode
-    
     
     var body: some View {
         
@@ -23,15 +21,15 @@ struct ResultsView: View {
             Spacer()
             
             Text("Danke fürs Abstimmen!")
-                .font(.largeTitle)
+                .font(.title)
                 .bold()
                 .padding(.bottom)
             
             Text("Das denken deine Mitmenschen zu diesem Thema:")
                 .font(.title2)
-                .fontWeight(.regular)
+                .foregroundColor(.secondary)
                 .padding(.bottom)
-                
+            
             
             HStack{
                 Spacer()
@@ -41,7 +39,7 @@ struct ResultsView: View {
             }
             .padding(.bottom)
             
-          
+            
             HStack {
                 Spacer()
                 Text("\(survey.totalParticipants) Menschen haben bei dieser Umfrage teilgenommen")
@@ -94,6 +92,6 @@ struct ResultsView: View {
 
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultsView(survey: ModelData.testSurveys.first!)
+        ResultsView(survey: ModelData().surveys.first!)
     }
 }

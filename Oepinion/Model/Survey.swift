@@ -8,11 +8,19 @@
 import Foundation
 import SwiftUI
 
-struct Survey: Identifiable{
+struct Survey: Codable, Identifiable{
     
-    var id = UUID()
+    var id:String
+    var title: String
+    var question:String
+    var category:Category
+    var results: [String: Int]
+    var totalParticipants: Int{
+        return results.values.reduce(0, +)
+    }
+    var wasAnswered = false
     
-    enum Category:String, CaseIterable, Identifiable{
+    enum Category:String, CaseIterable, Codable, Identifiable{
         var id: Self { self }
         
         case political = "Politik"
@@ -25,9 +33,21 @@ struct Survey: Identifiable{
         
     }
     
-    var question: Question
-    let results: [Question.Answer: Int]
-    var totalParticipants: Int{
-        return results.values.reduce(0, +)
-    }
+    
+    
+    static let test = Survey(
+        id: "12349149102",
+        title: "Öffentliche Verkehrsmittel",
+        question: "Sind sie mit den öffentlichen Verkehrsmitteln in Österreich zufrieden?",
+        category: .transport,
+        results:
+            ["yes" : 200,
+             "neutral" : 240,
+             "no" : 123])
+}
+
+enum Answer:String{
+    case yes = "Ja"
+    case no = "Nein"
+    case neutral = "Neutral"
 }

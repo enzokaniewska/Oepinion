@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE27529C28F7588B00CA3A84 /* UserSetup2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27529B28F7588B00CA3A84 /* UserSetup2.swift */; };
+		EE27529E28F7594E00CA3A84 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27529D28F7594E00CA3A84 /* UserInputView.swift */; };
 		EE43D79A28E5B019001B8CAC /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D79928E5B019001B8CAC /* CategoryLabel.swift */; };
 		EE43D79E28E6D770001B8CAC /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D79D28E6D770001B8CAC /* UserView.swift */; };
 		EE43D7A828E9B067001B8CAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7A728E9B067001B8CAC /* User.swift */; };
@@ -18,20 +20,27 @@
 		EE43D7B828EC882B001B8CAC /* CategoryOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7B728EC882B001B8CAC /* CategoryOverview.swift */; };
 		EE43D7BB28EC8A51001B8CAC /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7BA28EC8A51001B8CAC /* CategoryView.swift */; };
 		EE43D7BD28ECDB53001B8CAC /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7BC28ECDB53001B8CAC /* ModelData.swift */; };
+		EE43D7C028EF5C50001B8CAC /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7BF28EF5C50001B8CAC /* ProfileEditor.swift */; };
+		EE43D7C228EF6163001B8CAC /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7C128EF6163001B8CAC /* ProfileDataView.swift */; };
+		EE43D7C428F184A3001B8CAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE43D7C328F184A3001B8CAC /* GoogleService-Info.plist */; };
+		EE43D7C728F18C5E001B8CAC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EE43D7C628F18C5E001B8CAC /* FirebaseFirestore */; };
 		EE50B11728E36E7400FF3261 /* OepinionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B11628E36E7400FF3261 /* OepinionApp.swift */; };
-		EE50B11928E36E7400FF3261 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B11828E36E7400FF3261 /* ContentView.swift */; };
+		EE50B11928E36E7400FF3261 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B11828E36E7400FF3261 /* MainAppView.swift */; };
 		EE50B11B28E36E7400FF3261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE50B11A28E36E7400FF3261 /* Assets.xcassets */; };
 		EE50B11E28E36E7400FF3261 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE50B11D28E36E7400FF3261 /* Preview Assets.xcassets */; };
 		EE50B12828E36E7500FF3261 /* OepinionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B12728E36E7500FF3261 /* OepinionTests.swift */; };
 		EE50B13228E36E7500FF3261 /* OepinionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B13128E36E7500FF3261 /* OepinionUITests.swift */; };
 		EE50B13428E36E7500FF3261 /* OepinionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B13328E36E7500FF3261 /* OepinionUITestsLaunchTests.swift */; };
-		EE50B14528E3713500FF3261 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14428E3713500FF3261 /* Question.swift */; };
 		EE50B14728E3733100FF3261 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14628E3733100FF3261 /* ResultsView.swift */; };
 		EE50B14928E37E8D00FF3261 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14828E37E8D00FF3261 /* Survey.swift */; };
 		EE50B14D28E470E800FF3261 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14C28E470E800FF3261 /* QuestionView.swift */; };
-		EE50B14F28E473B900FF3261 /* TopicsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14E28E473B900FF3261 /* TopicsList.swift */; };
-		EE50B15128E47A5E00FF3261 /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B15028E47A5E00FF3261 /* QuestionItem.swift */; };
-		EE50B15328E4932300FF3261 /* QuestionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B15228E4932300FF3261 /* QuestionRow.swift */; };
+		EE50B14F28E473B900FF3261 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B14E28E473B900FF3261 /* ExploreView.swift */; };
+		EE50B15128E47A5E00FF3261 /* SurveyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B15028E47A5E00FF3261 /* SurveyItem.swift */; };
+		EE58B94B28FABFF000CFC627 /* HorizontalCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58B94A28FABFF000CFC627 /* HorizontalCategoryView.swift */; };
+		EE58B94D28FAC20400CFC627 /* CategoryButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58B94C28FAC20400CFC627 /* CategoryButton2.swift */; };
+		EE58B94F28FAFD6800CFC627 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58B94E28FAFD6800CFC627 /* SearchBar.swift */; };
+		EEE4789528FEDEDD00DFF014 /* CompactChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4789428FEDEDD00DFF014 /* CompactChart.swift */; };
+		EEE4789729001A6E00DFF014 /* ContentViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4789629001A6E00DFF014 /* ContentViewHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE27529B28F7588B00CA3A84 /* UserSetup2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetup2.swift; sourceTree = "<group>"; };
+		EE27529D28F7594E00CA3A84 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 		EE43D79928E5B019001B8CAC /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
 		EE43D79D28E6D770001B8CAC /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		EE43D7A728E9B067001B8CAC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -63,9 +74,12 @@
 		EE43D7B728EC882B001B8CAC /* CategoryOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOverview.swift; sourceTree = "<group>"; };
 		EE43D7BA28EC8A51001B8CAC /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		EE43D7BC28ECDB53001B8CAC /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		EE43D7BF28EF5C50001B8CAC /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
+		EE43D7C128EF6163001B8CAC /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
+		EE43D7C328F184A3001B8CAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE50B11328E36E7400FF3261 /* Oepinion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oepinion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE50B11628E36E7400FF3261 /* OepinionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OepinionApp.swift; sourceTree = "<group>"; };
-		EE50B11828E36E7400FF3261 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE50B11828E36E7400FF3261 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
 		EE50B11A28E36E7400FF3261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE50B11D28E36E7400FF3261 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE50B12328E36E7500FF3261 /* OepinionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OepinionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,13 +87,16 @@
 		EE50B12D28E36E7500FF3261 /* OepinionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OepinionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE50B13128E36E7500FF3261 /* OepinionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OepinionUITests.swift; sourceTree = "<group>"; };
 		EE50B13328E36E7500FF3261 /* OepinionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OepinionUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EE50B14428E3713500FF3261 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		EE50B14628E3733100FF3261 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		EE50B14828E37E8D00FF3261 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		EE50B14C28E470E800FF3261 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
-		EE50B14E28E473B900FF3261 /* TopicsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsList.swift; sourceTree = "<group>"; };
-		EE50B15028E47A5E00FF3261 /* QuestionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
-		EE50B15228E4932300FF3261 /* QuestionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRow.swift; sourceTree = "<group>"; };
+		EE50B14E28E473B900FF3261 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		EE50B15028E47A5E00FF3261 /* SurveyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItem.swift; sourceTree = "<group>"; };
+		EE58B94A28FABFF000CFC627 /* HorizontalCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCategoryView.swift; sourceTree = "<group>"; };
+		EE58B94C28FAC20400CFC627 /* CategoryButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton2.swift; sourceTree = "<group>"; };
+		EE58B94E28FAFD6800CFC627 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		EEE4789428FEDEDD00DFF014 /* CompactChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactChart.swift; sourceTree = "<group>"; };
+		EEE4789629001A6E00DFF014 /* ContentViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE43D7C728F18C5E001B8CAC /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,13 +125,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE43D79B28E63652001B8CAC /* QuestionView */ = {
+		EE27529028F5881400CA3A84 /* User Creation */ = {
 			isa = PBXGroup;
 			children = (
-				EE50B14E28E473B900FF3261 /* TopicsList.swift */,
-				EE50B15028E47A5E00FF3261 /* QuestionItem.swift */,
+				EE27529B28F7588B00CA3A84 /* UserSetup2.swift */,
+				EE27529D28F7594E00CA3A84 /* UserInputView.swift */,
 			);
-			path = QuestionView;
+			path = "User Creation";
+			sourceTree = "<group>";
+		};
+		EE27529F28F8B6D700CA3A84 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				EE50B14C28E470E800FF3261 /* QuestionView.swift */,
+				EE50B14628E3733100FF3261 /* ResultsView.swift */,
+				EE43D7B428EB7D82001B8CAC /* Charts */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		EE2752A028F8B74600CA3A84 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EE27529028F5881400CA3A84 /* User Creation */,
+				EE43D7A928E9B4F9001B8CAC /* StartScreen.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		EE43D79B28E63652001B8CAC /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D7BA28EC8A51001B8CAC /* CategoryView.swift */,
+				EE50B14E28E473B900FF3261 /* ExploreView.swift */,
+				EE50B15028E47A5E00FF3261 /* SurveyItem.swift */,
+			);
+			path = Explore;
 			sourceTree = "<group>";
 		};
 		EE43D79C28E63668001B8CAC /* Helper Views */ = {
@@ -122,6 +169,9 @@
 				EE43D7AD28EAE4F7001B8CAC /* CategoryButton.swift */,
 				EE43D79928E5B019001B8CAC /* CategoryLabel.swift */,
 				EE43D7B728EC882B001B8CAC /* CategoryOverview.swift */,
+				EE58B94A28FABFF000CFC627 /* HorizontalCategoryView.swift */,
+				EE58B94C28FAC20400CFC627 /* CategoryButton2.swift */,
+				EE58B94E28FAFD6800CFC627 /* SearchBar.swift */,
 			);
 			path = "Helper Views";
 			sourceTree = "<group>";
@@ -140,8 +190,19 @@
 			children = (
 				EE43D7AF28EB6623001B8CAC /* PieChart */,
 				EE43D7B528EB7DA4001B8CAC /* ChartView.swift */,
+				EEE4789428FEDEDD00DFF014 /* CompactChart.swift */,
 			);
 			path = Charts;
+			sourceTree = "<group>";
+		};
+		EE43D7BE28EF5C35001B8CAC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D79D28E6D770001B8CAC /* UserView.swift */,
+				EE43D7BF28EF5C50001B8CAC /* ProfileEditor.swift */,
+				EE43D7C128EF6163001B8CAC /* ProfileDataView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		EE50B10A28E36E7400FF3261 = {
@@ -170,6 +231,7 @@
 				EE50B14328E3712400FF3261 /* Model */,
 				EE50B14028E3710700FF3261 /* Views */,
 				EE50B11628E36E7400FF3261 /* OepinionApp.swift */,
+				EE43D7C328F184A3001B8CAC /* GoogleService-Info.plist */,
 				EE50B11A28E36E7400FF3261 /* Assets.xcassets */,
 				EE50B11C28E36E7400FF3261 /* Preview Content */,
 			);
@@ -204,16 +266,13 @@
 		EE50B14028E3710700FF3261 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE43D7B428EB7D82001B8CAC /* Charts */,
-				EE50B11828E36E7400FF3261 /* ContentView.swift */,
-				EE43D79B28E63652001B8CAC /* QuestionView */,
+				EEE4789629001A6E00DFF014 /* ContentViewHandler.swift */,
+				EE50B11828E36E7400FF3261 /* MainAppView.swift */,
+				EE2752A028F8B74600CA3A84 /* Onboarding */,
+				EE27529F28F8B6D700CA3A84 /* Survey */,
+				EE43D7BE28EF5C35001B8CAC /* Profile */,
+				EE43D79B28E63652001B8CAC /* Explore */,
 				EE43D79C28E63668001B8CAC /* Helper Views */,
-				EE50B14628E3733100FF3261 /* ResultsView.swift */,
-				EE50B14C28E470E800FF3261 /* QuestionView.swift */,
-				EE50B15228E4932300FF3261 /* QuestionRow.swift */,
-				EE43D79D28E6D770001B8CAC /* UserView.swift */,
-				EE43D7A928E9B4F9001B8CAC /* StartScreen.swift */,
-				EE43D7BA28EC8A51001B8CAC /* CategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,7 +280,6 @@
 		EE50B14328E3712400FF3261 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EE50B14428E3713500FF3261 /* Question.swift */,
 				EE50B14828E37E8D00FF3261 /* Survey.swift */,
 				EE43D7A728E9B067001B8CAC /* User.swift */,
 				EE43D7BC28ECDB53001B8CAC /* ModelData.swift */,
@@ -245,6 +303,9 @@
 			dependencies = (
 			);
 			name = Oepinion;
+			packageProductDependencies = (
+				EE43D7C628F18C5E001B8CAC /* FirebaseFirestore */,
+			);
 			productName = Oepinion;
 			productReference = EE50B11328E36E7400FF3261 /* Oepinion.app */;
 			productType = "com.apple.product-type.application";
@@ -317,6 +378,9 @@
 				Base,
 			);
 			mainGroup = EE50B10A28E36E7400FF3261;
+			packageReferences = (
+				EE43D7C528F18C5E001B8CAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EE50B11428E36E7400FF3261 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE50B11E28E36E7400FF3261 /* Preview Assets.xcassets in Resources */,
+				EE43D7C428F184A3001B8CAC /* GoogleService-Info.plist in Resources */,
 				EE50B11B28E36E7400FF3261 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,21 +427,28 @@
 				EE43D79E28E6D770001B8CAC /* UserView.swift in Sources */,
 				EE43D79A28E5B019001B8CAC /* CategoryLabel.swift in Sources */,
 				EE43D7B828EC882B001B8CAC /* CategoryOverview.swift in Sources */,
-				EE50B15328E4932300FF3261 /* QuestionRow.swift in Sources */,
 				EE50B14928E37E8D00FF3261 /* Survey.swift in Sources */,
+				EE58B94D28FAC20400CFC627 /* CategoryButton2.swift in Sources */,
 				EE43D7BB28EC8A51001B8CAC /* CategoryView.swift in Sources */,
 				EE43D7AA28E9B4F9001B8CAC /* StartScreen.swift in Sources */,
-				EE50B14528E3713500FF3261 /* Question.swift in Sources */,
+				EE58B94F28FAFD6800CFC627 /* SearchBar.swift in Sources */,
 				EE43D7B128EB6634001B8CAC /* PieChartView.swift in Sources */,
-				EE50B14F28E473B900FF3261 /* TopicsList.swift in Sources */,
+				EEE4789729001A6E00DFF014 /* ContentViewHandler.swift in Sources */,
+				EE50B14F28E473B900FF3261 /* ExploreView.swift in Sources */,
 				EE50B14728E3733100FF3261 /* ResultsView.swift in Sources */,
-				EE50B11928E36E7400FF3261 /* ContentView.swift in Sources */,
+				EE43D7C028EF5C50001B8CAC /* ProfileEditor.swift in Sources */,
+				EE27529C28F7588B00CA3A84 /* UserSetup2.swift in Sources */,
+				EE50B11928E36E7400FF3261 /* MainAppView.swift in Sources */,
 				EE43D7B628EB7DA4001B8CAC /* ChartView.swift in Sources */,
 				EE43D7A828E9B067001B8CAC /* User.swift in Sources */,
-				EE50B15128E47A5E00FF3261 /* QuestionItem.swift in Sources */,
+				EE50B15128E47A5E00FF3261 /* SurveyItem.swift in Sources */,
 				EE43D7AE28EAE4F7001B8CAC /* CategoryButton.swift in Sources */,
 				EE50B14D28E470E800FF3261 /* QuestionView.swift in Sources */,
+				EE43D7C228EF6163001B8CAC /* ProfileDataView.swift in Sources */,
+				EEE4789528FEDEDD00DFF014 /* CompactChart.swift in Sources */,
+				EE58B94B28FABFF000CFC627 /* HorizontalCategoryView.swift in Sources */,
 				EE43D7BD28ECDB53001B8CAC /* ModelData.swift in Sources */,
+				EE27529E28F7594E00CA3A84 /* UserInputView.swift in Sources */,
 				EE43D7B328EB6E1B001B8CAC /* PieChartSlice.swift in Sources */,
 				EE50B11728E36E7400FF3261 /* OepinionApp.swift in Sources */,
 			);
@@ -552,6 +624,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = enzokaniewska.Oepinion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -581,6 +656,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = enzokaniewska.Oepinion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -703,6 +781,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE43D7C528F18C5E001B8CAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE43D7C628F18C5E001B8CAC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE43D7C528F18C5E001B8CAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE50B10B28E36E7400FF3261 /* Project object */;
 }

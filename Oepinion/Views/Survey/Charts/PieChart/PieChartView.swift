@@ -35,6 +35,7 @@ struct PieChartView: View {
             ZStack{
                 ForEach(0..<self.values.count){ i in
                     PieChartSlice(pieData: self.slices[i])
+                       
                 }
                 .frame(width: geometry.size.width, height: geometry.size.width)
                 
