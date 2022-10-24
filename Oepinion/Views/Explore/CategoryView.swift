@@ -25,7 +25,16 @@ struct CategoryView: View {
             }
             
             ForEach(filteredSurveys) { survey in
-                SurveyItem(survey: survey)
+                NavigationLink {
+                    if survey.wasAnswered{
+                        ResultsView(survey: survey)
+                    }else{
+                        QuestionView(survey: survey)
+                    }
+                    
+                } label: {
+                    SurveyItem(survey: survey)
+                }
             }
             
             

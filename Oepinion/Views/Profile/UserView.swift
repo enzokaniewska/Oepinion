@@ -14,7 +14,7 @@ struct UserView: View {
     @Environment(\.editMode) var editMode
     let haptic = UINotificationFeedbackGenerator()
 
-    @State var editedUser = ModelData.testUser
+    @State var editedUser = User(id: "a", imageName: "a", isNotificationsEnabled: false, birthdate: Date(), region: "s", gender: .male)
     
     @State private var newPictureButtonPressed = false
     
@@ -91,6 +91,8 @@ struct UserView: View {
                     }
                     .onDisappear{
                         modelData.user = editedUser
+                        modelData.saveUserInDatabase(user: editedUser)
+                    
                     }
                 
             }

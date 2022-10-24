@@ -12,7 +12,6 @@ struct ExploreView: View {
     
     @EnvironmentObject var modelData: ModelData
     
-    @State var user = ModelData.testUser
     @State var userSheetPresented = false
     let background = Color("Background")
     
@@ -40,22 +39,27 @@ struct ExploreView: View {
                     
                     Divider()
                     
-                    Text("Frage des Tages")
-                        .font(.title)
-                        .bold()
-                        .padding(.leading)
-                    
-                    SurveyItem(survey: Survey.test)
+//                    Text("Frage des Tages")
+//                        .font(.title)
+//                        .bold()
+//                        .padding(.leading)
+//
+//                    SurveyItem(survey: Survey.test)
                     
                     Text("Zurzeit im Trend")
                         .font(.title)
-                        .padding(.leading)
+                        .padding(.leading, 10)
                         .bold()
                     
                     ForEach(modelData.surveys){ survey in
                         
                         NavigationLink {
-                            QuestionView(survey: survey)
+                            if survey.wasAnswered{
+                                ResultsView(survey: survey)
+                            }else{
+                                QuestionView(survey: survey)
+                            }
+                            
                         } label: {
                             SurveyItem(survey: survey)
                         }

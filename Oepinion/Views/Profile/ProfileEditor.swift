@@ -23,7 +23,7 @@ struct ProfileEditor: View {
                 }
             }
       
-            Toggle("Benachrichtigungen", isOn: $editedUser.isNotificationEnabled)
+            Toggle("Benachrichtigungen", isOn: $editedUser.isNotificationsEnabled)
         }
         .listStyle(.plain)
     }

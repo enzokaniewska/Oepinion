@@ -30,7 +30,7 @@ struct ProfileDataView: View {
             HStack{
                 Text("Benachrichtigungen")
                 Spacer()
-                Text(user.isNotificationEnabled ? "Ein" : "Aus")
+                Text(user.isNotificationsEnabled ? "Ein" : "Aus")
             }
             
             
@@ -43,6 +43,6 @@ struct ProfileDataView: View {
 
 struct ProfileDataView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileDataView(user: ModelData.testUser)
+        ProfileDataView(user: ModelData().user)
     }
 }

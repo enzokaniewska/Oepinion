@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct CreateUserView: View {
     
 
     @EnvironmentObject var modelData:ModelData
     
-    @State var newUser = User(imageName: "animal10", isNotificationEnabled: false, birthdate: Date(), region: "Kärnten", gender: .female)
     
-    
-    @State var user = User(imageName: "animal1", isNotificationEnabled: false, birthdate: Date(), region: "Kärnten", gender: .male)
+    @State var user = User(id: UIDevice().identifierForVendor!.uuidString, imageName: "animal1", isNotificationsEnabled: false, birthdate: Date(), region: "Kärnten", gender: .male)
     var body: some View {
      
         

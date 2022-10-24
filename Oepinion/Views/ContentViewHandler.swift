@@ -16,7 +16,9 @@ struct ContentViewHandler: View {
     var body: some View {
         
         if modelData.userIsLoggedIn{
-            MainAppView()
+            MainAppView().onAppear(){
+                modelData.loadSurveys()
+            }
         }else{
             if !startButtonPressed{
                 StartScreen(startButtonPressed: $startButtonPressed)

@@ -31,6 +31,7 @@ struct PieChartView: View {
     
     var body: some View {
         
+       
         GeometryReader { geometry in
             ZStack{
                 ForEach(0..<self.values.count){ i in
@@ -41,7 +42,7 @@ struct PieChartView: View {
                 
                 Circle()
                     .fill(Color(UIColor.systemBackground))
-                    .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.5)
+                    .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.4)
                 
                 VStack{
                     Image(systemName: "person.3.sequence.fill")
@@ -55,6 +56,8 @@ struct PieChartView: View {
            
             
         }
+            
+        
    
     }
     

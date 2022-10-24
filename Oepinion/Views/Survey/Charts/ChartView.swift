@@ -13,6 +13,7 @@ struct ChartView: View {
     var survey: Survey
     @State var chartType: ChartType = .barChart
     
+    
     enum ChartType: String, CaseIterable, Identifiable{
         case barChart = "Säulendiagramm"
         case pieChart = "Kreisdiagramm"
@@ -34,41 +35,21 @@ struct ChartView: View {
             .pickerStyle(.segmented)
         
             if chartType == .barChart{
-                Chart{
-                    BarMark(
-                        x: .value("Yes", "Ja"),
-                        y: .value("Anzahl", survey.results["yes"]!)
-                    )
-                    .cornerRadius(10)
-                    .foregroundStyle(Color.green)
-                    
-                    BarMark(
-                        x: .value("Nein", "Nein"),
-                        y: .value("Anzahl", survey.results["no"]!)
-                    )
-                    .cornerRadius(10)
-                    .foregroundStyle(Color.red)
-                    
-                    BarMark(
-                        x: .value("Neutral", "Neutral"),
-                        y: .value("Anzahl", survey.results["neutral"]!)
-                    )
-                    .cornerRadius(10)
-                    .foregroundStyle(Color.orange)
-                }
-                .frame(width: 300, height: 260)
                 
+                BarChartView(survey: survey)
+                    .frame(width: 350, height: 300)
+        
             } else{
                 PieChartView(
                     backgroundColor: .white,
                     colors: [.green, .red, .orange],
                     values: [
-                        Double(survey.results["yes"]!),
-                        Double(survey.results["no"]!),
-                        Double(survey.results["neutral"]!)
+                        Double(survey.resultsByOptions["Yes"] ?? 100),
+                        Double(survey.resultsByOptions["No"] ?? 100),
+                        Double(survey.resultsByOptions["Neutral"] ?? 100)
                     ]
                 )
-                .frame(width: 260, height: 260)
+                .frame(width: 300, height: 300)
                 
                     
             }
@@ -77,6 +58,11 @@ struct ChartView: View {
         }
         
     }
+}
+
+enum ChartRepresentation{
+    case byAge
+    case byGender
 }
 
 struct ChartView_Previews: PreviewProvider {

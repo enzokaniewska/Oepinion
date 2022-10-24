@@ -24,6 +24,7 @@
 		EE43D7C228EF6163001B8CAC /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D7C128EF6163001B8CAC /* ProfileDataView.swift */; };
 		EE43D7C428F184A3001B8CAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE43D7C328F184A3001B8CAC /* GoogleService-Info.plist */; };
 		EE43D7C728F18C5E001B8CAC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EE43D7C628F18C5E001B8CAC /* FirebaseFirestore */; };
+		EE4758C02901E6BC00F229EA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4758BF2901E6BC00F229EA /* Result.swift */; };
 		EE50B11728E36E7400FF3261 /* OepinionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B11628E36E7400FF3261 /* OepinionApp.swift */; };
 		EE50B11928E36E7400FF3261 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50B11828E36E7400FF3261 /* MainAppView.swift */; };
 		EE50B11B28E36E7400FF3261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE50B11A28E36E7400FF3261 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		EE58B94B28FABFF000CFC627 /* HorizontalCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58B94A28FABFF000CFC627 /* HorizontalCategoryView.swift */; };
 		EE58B94D28FAC20400CFC627 /* CategoryButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58B94C28FAC20400CFC627 /* CategoryButton2.swift */; };
 		EE58B94F28FAFD6800CFC627 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58B94E28FAFD6800CFC627 /* SearchBar.swift */; };
+		EE7CFBD729068C1600F86748 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CFBD629068C1600F86748 /* BarChartView.swift */; };
 		EEE4789528FEDEDD00DFF014 /* CompactChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4789428FEDEDD00DFF014 /* CompactChart.swift */; };
 		EEE4789729001A6E00DFF014 /* ContentViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4789629001A6E00DFF014 /* ContentViewHandler.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,7 @@
 		EE43D7BF28EF5C50001B8CAC /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		EE43D7C128EF6163001B8CAC /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 		EE43D7C328F184A3001B8CAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE4758BF2901E6BC00F229EA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EE50B11328E36E7400FF3261 /* Oepinion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oepinion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE50B11628E36E7400FF3261 /* OepinionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OepinionApp.swift; sourceTree = "<group>"; };
 		EE50B11828E36E7400FF3261 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 		EE58B94A28FABFF000CFC627 /* HorizontalCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCategoryView.swift; sourceTree = "<group>"; };
 		EE58B94C28FAC20400CFC627 /* CategoryButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton2.swift; sourceTree = "<group>"; };
 		EE58B94E28FAFD6800CFC627 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		EE7CFBD629068C1600F86748 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		EEE4789428FEDEDD00DFF014 /* CompactChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactChart.swift; sourceTree = "<group>"; };
 		EEE4789629001A6E00DFF014 /* ContentViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +195,7 @@
 				EE43D7AF28EB6623001B8CAC /* PieChart */,
 				EE43D7B528EB7DA4001B8CAC /* ChartView.swift */,
 				EEE4789428FEDEDD00DFF014 /* CompactChart.swift */,
+				EE7CFBD629068C1600F86748 /* BarChartView.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				EE50B14828E37E8D00FF3261 /* Survey.swift */,
 				EE43D7A728E9B067001B8CAC /* User.swift */,
 				EE43D7BC28ECDB53001B8CAC /* ModelData.swift */,
+				EE4758BF2901E6BC00F229EA /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -442,8 +448,10 @@
 				EE43D7B628EB7DA4001B8CAC /* ChartView.swift in Sources */,
 				EE43D7A828E9B067001B8CAC /* User.swift in Sources */,
 				EE50B15128E47A5E00FF3261 /* SurveyItem.swift in Sources */,
+				EE4758C02901E6BC00F229EA /* Result.swift in Sources */,
 				EE43D7AE28EAE4F7001B8CAC /* CategoryButton.swift in Sources */,
 				EE50B14D28E470E800FF3261 /* QuestionView.swift in Sources */,
+				EE7CFBD729068C1600F86748 /* BarChartView.swift in Sources */,
 				EE43D7C228EF6163001B8CAC /* ProfileDataView.swift in Sources */,
 				EEE4789528FEDEDD00DFF014 /* CompactChart.swift in Sources */,
 				EE58B94B28FABFF000CFC627 /* HorizontalCategoryView.swift in Sources */,

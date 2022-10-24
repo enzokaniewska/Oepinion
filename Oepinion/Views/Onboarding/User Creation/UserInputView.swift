@@ -100,7 +100,7 @@ struct UserInputView: View {
                 
             
             
-            Toggle("Benachrichtigungen erhalten", isOn: $user.isNotificationEnabled)
+            Toggle("Benachrichtigungen erhalten", isOn: $user.isNotificationsEnabled)
                 .foregroundColor(.secondary)
             
            

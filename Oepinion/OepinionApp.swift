@@ -28,12 +28,9 @@ struct OepinionApp: App {
             ContentViewHandler()
                 .environmentObject(modelData)
                 .onAppear{
-                    modelData.loadSurveys()
                     if modelData.getUserFromLocalData() == nil{
                         modelData.fetchUserFromDatabase(withID: UIDevice().identifierForVendor!.uuidString)
                     }
-            
-                    
                 }
             
             

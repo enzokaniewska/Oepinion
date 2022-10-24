@@ -34,7 +34,7 @@ struct ResultsView: View {
             HStack{
                 Spacer()
                 ChartView(survey: survey)
-                    .frame(width: 300, height: 300)
+                    .frame(width: 300, height: 400)
                 Spacer()
             }
             .padding(.bottom)
@@ -51,31 +51,20 @@ struct ResultsView: View {
             Spacer()
             HStack {
                 Spacer()
-                VStack{
-                    Button(action: {
-                        
-                    }) {
-                        Label("Teilen", systemImage: "square.and.arrow.up.circle.fill")
-                            .symbolRenderingMode(.hierarchical)
-                    }
-                    .font(.title)
-                    .buttonStyle(.borderedProminent)
-                    .tint(.blue)
+                
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
                     
-                    
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                        
-                    }) {
-                        Label("Zurück", systemImage: "arrowshape.turn.up.backward.circle.fill")
-                            .symbolRenderingMode(.hierarchical)
-                    }
-                    .font(.title)
-                    .buttonStyle(.borderedProminent)
-                    .tint(.red)
-                    .scaledToFit()
-                    
+                }) {
+                    Label("Zurück", systemImage: "arrowshape.turn.up.backward.circle.fill")
+                        .symbolRenderingMode(.hierarchical)
+                        .padding(.horizontal)
                 }
+                
+                .font(.title2)
+                .buttonStyle(.borderedProminent)
+                .tint(.red)
+                
                 Spacer()
             }
             

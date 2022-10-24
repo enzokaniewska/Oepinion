@@ -59,24 +59,6 @@ struct SurveyItem: View {
                     .padding(.top, 5)
                     .padding(.bottom,15)
 
-
-//                Button(action: {
-//                
-//                }, label: {
-//                    Label(survey.wasAnswered ? "Ergebnis einsehen" : "Abstimmen",
-//                          systemImage: survey.wasAnswered ? "chart.pie.fill" : "bubble.right.fill")
-//                    .symbolRenderingMode(.hierarchical)
-//                    .labelStyle(.titleOnly)
-//                    
-//                })
-//                .buttonStyle(.bordered)
-//                .font(.title3)
-//                .tint(survey.wasAnswered ? .teal : .red)
-//                .padding(.top, 5)
-//                .padding(.bottom,15)
-                    
-                
-
                 
             }
             
